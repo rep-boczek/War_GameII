@@ -12,6 +12,7 @@
 #include <wx/msgdlg.h>
 
 //(*InternalHeaders(War_Game_GUIFrame)
+#include <wx/font.h>
 #include <wx/intl.h>
 #include <wx/string.h>
 //*)
@@ -44,6 +45,18 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 
 //(*IdInit(War_Game_GUIFrame)
 const long War_Game_GUIFrame::ID_GRID1 = wxNewId();
+const long War_Game_GUIFrame::ID_STATICTEXT1 = wxNewId();
+const long War_Game_GUIFrame::ID_STATICTEXT2 = wxNewId();
+const long War_Game_GUIFrame::ID_STATICTEXT3 = wxNewId();
+const long War_Game_GUIFrame::ID_STATICTEXT4 = wxNewId();
+const long War_Game_GUIFrame::ID_STATICTEXT5 = wxNewId();
+const long War_Game_GUIFrame::ID_STATICTEXT6 = wxNewId();
+const long War_Game_GUIFrame::ID_SPINCTRL1 = wxNewId();
+const long War_Game_GUIFrame::ID_SPINCTRL2 = wxNewId();
+const long War_Game_GUIFrame::ID_SPINCTRL3 = wxNewId();
+const long War_Game_GUIFrame::ID_SPINCTRL4 = wxNewId();
+const long War_Game_GUIFrame::ID_SPINCTRL5 = wxNewId();
+const long War_Game_GUIFrame::ID_SPINCTRL6 = wxNewId();
 const long War_Game_GUIFrame::ID_PANEL1 = wxNewId();
 const long War_Game_GUIFrame::ID_PANEL2 = wxNewId();
 const long War_Game_GUIFrame::idMenuQuit = wxNewId();
@@ -78,6 +91,26 @@ War_Game_GUIFrame::War_Game_GUIFrame(wxWindow* parent,wxWindowID id)
     Grid1->SetDefaultCellFont( Grid1->GetFont() );
     Grid1->SetDefaultCellTextColour( Grid1->GetForegroundColour() );
     Panel1 = new wxPanel(this, ID_PANEL1, wxPoint(615,5), wxSize(380,305), wxTAB_TRAVERSAL, _T("ID_PANEL1"));
+    wxFont Panel1Font(12,wxFONTFAMILY_DEFAULT,wxFONTSTYLE_NORMAL,wxFONTWEIGHT_NORMAL,false,wxEmptyString,wxFONTENCODING_DEFAULT);
+    Panel1->SetFont(Panel1Font);
+    StaticText1 = new wxStaticText(Panel1, ID_STATICTEXT1, _("Ninja"), wxPoint(24,24), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
+    StaticText2 = new wxStaticText(Panel1, ID_STATICTEXT2, _("Archer"), wxPoint(24,120), wxDefaultSize, 0, _T("ID_STATICTEXT2"));
+    StaticText3 = new wxStaticText(Panel1, ID_STATICTEXT3, _("Cannon"), wxPoint(24,168), wxDefaultSize, 0, _T("ID_STATICTEXT3"));
+    StaticText4 = new wxStaticText(Panel1, ID_STATICTEXT4, _("Robot1000"), wxPoint(24,216), wxDefaultSize, 0, _T("ID_STATICTEXT4"));
+    StaticText5 = new wxStaticText(Panel1, ID_STATICTEXT5, _("Robot2000"), wxPoint(24,264), wxDefaultSize, 0, _T("ID_STATICTEXT5"));
+    StaticText6 = new wxStaticText(Panel1, ID_STATICTEXT6, _("Soldier"), wxPoint(24,72), wxDefaultSize, 0, _T("ID_STATICTEXT6"));
+    SpinCtrl1 = new wxSpinCtrl(Panel1, ID_SPINCTRL1, _T("0"), wxPoint(144,16), wxDefaultSize, 0, 0, 100, 0, _T("ID_SPINCTRL1"));
+    SpinCtrl1->SetValue(_T("0"));
+    SpinCtrl2 = new wxSpinCtrl(Panel1, ID_SPINCTRL2, _T("0"), wxPoint(144,64), wxDefaultSize, 0, 0, 100, 0, _T("ID_SPINCTRL2"));
+    SpinCtrl2->SetValue(_T("0"));
+    SpinCtrl3 = new wxSpinCtrl(Panel1, ID_SPINCTRL3, _T("0"), wxPoint(144,112), wxDefaultSize, 0, 0, 100, 0, _T("ID_SPINCTRL3"));
+    SpinCtrl3->SetValue(_T("0"));
+    SpinCtrl4 = new wxSpinCtrl(Panel1, ID_SPINCTRL4, _T("0"), wxPoint(144,160), wxDefaultSize, 0, 0, 100, 0, _T("ID_SPINCTRL4"));
+    SpinCtrl4->SetValue(_T("0"));
+    SpinCtrl5 = new wxSpinCtrl(Panel1, ID_SPINCTRL5, _T("0"), wxPoint(144,208), wxDefaultSize, 0, 0, 100, 0, _T("ID_SPINCTRL5"));
+    SpinCtrl5->SetValue(_T("0"));
+    SpinCtrl6 = new wxSpinCtrl(Panel1, ID_SPINCTRL6, _T("0"), wxPoint(144,256), wxDefaultSize, 0, 0, 100, 0, _T("ID_SPINCTRL6"));
+    SpinCtrl6->SetValue(_T("0"));
     Panel2 = new wxPanel(this, ID_PANEL2, wxPoint(615,315), wxSize(380,305), wxTAB_TRAVERSAL, _T("ID_PANEL2"));
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();

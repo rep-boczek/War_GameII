@@ -15,6 +15,8 @@
 #include <wx/grid.h>
 #include <wx/menu.h>
 #include <wx/panel.h>
+#include <wx/spinctrl.h>
+#include <wx/stattext.h>
 #include <wx/statusbr.h>
 //*)
 
@@ -34,6 +36,18 @@ class War_Game_GUIFrame: public wxFrame
 
         //(*Identifiers(War_Game_GUIFrame)
         static const long ID_GRID1;
+        static const long ID_STATICTEXT1;
+        static const long ID_STATICTEXT2;
+        static const long ID_STATICTEXT3;
+        static const long ID_STATICTEXT4;
+        static const long ID_STATICTEXT5;
+        static const long ID_STATICTEXT6;
+        static const long ID_SPINCTRL1;
+        static const long ID_SPINCTRL2;
+        static const long ID_SPINCTRL3;
+        static const long ID_SPINCTRL4;
+        static const long ID_SPINCTRL5;
+        static const long ID_SPINCTRL6;
         static const long ID_PANEL1;
         static const long ID_PANEL2;
         static const long idMenuQuit;
@@ -45,6 +59,18 @@ class War_Game_GUIFrame: public wxFrame
         wxGrid* Grid1;
         wxPanel* Panel1;
         wxPanel* Panel2;
+        wxSpinCtrl* SpinCtrl1;
+        wxSpinCtrl* SpinCtrl2;
+        wxSpinCtrl* SpinCtrl3;
+        wxSpinCtrl* SpinCtrl4;
+        wxSpinCtrl* SpinCtrl5;
+        wxSpinCtrl* SpinCtrl6;
+        wxStaticText* StaticText1;
+        wxStaticText* StaticText2;
+        wxStaticText* StaticText3;
+        wxStaticText* StaticText4;
+        wxStaticText* StaticText5;
+        wxStaticText* StaticText6;
         wxStatusBar* StatusBar1;
         //*)
 
