@@ -15,6 +15,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="C:/rep_boczek/Game/War_Game_GUI/" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -33,6 +34,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="C:/rep_boczek/Game/War_Game_GUI/" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -64,6 +66,8 @@
 		<Linker>
 			<Add option="-mthreads" />
 		</Linker>
+		<Unit filename="Unit.cpp" />
+		<Unit filename="Unit.h" />
 		<Unit filename="War_Game_GUIApp.cpp" />
 		<Unit filename="War_Game_GUIApp.h" />
 		<Unit filename="War_Game_GUIMain.cpp" />
