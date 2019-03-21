@@ -1,20 +1,27 @@
+#include <iostream>
 #include "Unit.h"
 #include <stdlib.h>
 #include <time.h>
+#include <Coordinates.h>>
+
 
 
 Unit::Unit()
 {
     //ctor
-    srand (time(NULL));
+
+
 }
 
-    void Unit::position ()
-    {
-        int x = rand() % 99 + 1;
-        int y = rand() % 399 + 1;
-        std::cout<<"position "<<x<<","<<y<<std::endl;
-    }
+int* Unit::startPosition()
+{
+    int XY[2];
+    XY[0] = Coordinates::pickRan();
+    XY[1] = Coordinates::pickRan();
+
+    return XY;
+}
+
 
 
 Unit::~Unit()

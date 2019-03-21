@@ -66,6 +66,11 @@
 		<Linker>
 			<Add option="-mthreads" />
 		</Linker>
+		<Unit filename="Control" />
+		<Unit filename="Control.cpp" />
+		<Unit filename="Control.h" />
+		<Unit filename="Coordinates.cpp" />
+		<Unit filename="Coordinates.h" />
 		<Unit filename="Unit.cpp" />
 		<Unit filename="Unit.h" />
 		<Unit filename="War_Game_GUIApp.cpp" />

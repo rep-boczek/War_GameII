@@ -1396,7 +1396,7 @@
 	"wx/cocoa/combobox.h"
 	"wx/os2/combobox.h"
 
-1300796553 c:\rep_boczek\wxwidgets-2.8.12\include\wx\textctrl.h
+1553175272 c:\rep_boczek\wxwidgets-2.8.12\include\wx\textctrl.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/dynarray.h"
@@ -1853,14 +1853,15 @@
 1553124152 c:\rep_boczek\game\war_game_gui\war_game_guiapp.h
 	<wx/app.h>
 
-1553125763 c:\rep_boczek\game\war_game_gui\war_game_guimain.h
+1553165837 c:\rep_boczek\game\war_game_gui\war_game_guimain.h
+	<wx/button.h>
 	<wx/frame.h>
-	<wx/grid.h>
 	<wx/menu.h>
 	<wx/panel.h>
 	<wx/spinctrl.h>
 	<wx/stattext.h>
 	<wx/statusbr.h>
+	<wx/textctrl.h>
 
 1300796549 c:\rep_boczek\wxwidgets-2.8.12\include\wx\grid.h
 	"wx/generic/grid.h"
@@ -1907,4 +1908,51 @@
 1300796557 c:\rep_boczek\wxwidgets-2.8.12\include\wx\msw\spinctrl.h
 	"wx/spinbutt.h"
 	"wx/dynarray.h"
+
+1553198556 source:c:\rep_boczek\game\war_game_gui\war_game_guimain.cpp
+	"wx_pch.h"
+	"War_Game_GUIMain.h"
+	<wx/msgdlg.h>
+	<wx/textctrl.h>
+	"Unit.h"
+	<string>
+	<sstream>
+	<wx/font.h>
+	<wx/intl.h>
+	<wx/string.h>
+
+1553198941 source:c:\rep_boczek\game\war_game_gui\unit.cpp
+	<iostream>
+	"Unit.h"
+	<stdlib.h>
+	<time.h>
+	<Coordinates.h>
+
+1553198941 c:\rep_boczek\game\war_game_gui\unit.h
+	<iostream>
+
+1553167579 c:\rep_boczek\game\war_game_gui\unit.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+
+1553197258 source:c:\rep_boczek\game\war_game_gui\coordinates.cpp
+	"Coordinates.h"
+	<iostream>
+	<stdlib.h>
+	<time.h>
+
+1553197258 c:\rep_boczek\game\war_game_gui\coordinates.h
+
+1553197258 c:\rep_boczek\game\war_game_gui\\coordinates.h
+
+1553200760 source:c:\rep_boczek\game\war_game_gui\control.cpp
+	<iostream>
+	"Unit.h"
+	<stdlib.h>
+	<time.h>
+	<Coordinates.h>
+	"Control.h"
+
+1553200750 c:\rep_boczek\game\war_game_gui\control.h
 

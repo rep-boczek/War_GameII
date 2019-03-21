@@ -4,17 +4,6 @@
 		<title>MainFrame</title>
 		<size>1000,800</size>
 		<id_arg>0</id_arg>
-		<object class="wxGrid" name="ID_GRID1" variable="Grid1" member="yes">
-			<cols>40</cols>
-			<rows>40</rows>
-			<labelrowheight>1</labelrowheight>
-			<labelcolwidth>1</labelcolwidth>
-			<defaultrowsize>1</defaultrowsize>
-			<defaultcolsize>1</defaultcolsize>
-			<pos>5,5</pos>
-			<size>605,615</size>
-			<enabled>0</enabled>
-		</object>
 		<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
 			<pos>615,5</pos>
 			<size>380,305</size>
@@ -124,6 +113,23 @@
 				<value>0</value>
 				<pos>144,256</pos>
 			</object>
+		</object>
+		<object class="wxPanel" name="ID_PANEL3" variable="Panel3" member="yes">
+			<pos>5,5</pos>
+			<size>605,615</size>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes">
+			<value>Text</value>
+			<pos>8,632</pos>
+			<size>600,152</size>
+			<style>wxTE_READONLY|wxTE_WORDWRAP</style>
+			<handler function="OnTextCtrl1Text" entry="EVT_TEXT" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+			<label>Start</label>
+			<pos>624,744</pos>
+			<size>360,31</size>
+			<handler function="OnButton1Click" entry="EVT_BUTTON" />
 		</object>
 		<object class="wxMenuBar" variable="MenuBar1" member="no">
 			<object class="wxMenu" variable="Menu1" member="no">

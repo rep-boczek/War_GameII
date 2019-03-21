@@ -10,6 +10,11 @@
 #include "wx_pch.h"
 #include "War_Game_GUIMain.h"
 #include <wx/msgdlg.h>
+#include <wx/textctrl.h>
+#include "Unit.h"
+#include "Coordinates.h"
+#include <string>
+#include <sstream>
 
 //(*InternalHeaders(War_Game_GUIFrame)
 #include <wx/font.h>
@@ -44,7 +49,6 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*IdInit(War_Game_GUIFrame)
-const long War_Game_GUIFrame::ID_GRID1 = wxNewId();
 const long War_Game_GUIFrame::ID_STATICTEXT1 = wxNewId();
 const long War_Game_GUIFrame::ID_STATICTEXT2 = wxNewId();
 const long War_Game_GUIFrame::ID_STATICTEXT3 = wxNewId();
@@ -71,6 +75,9 @@ const long War_Game_GUIFrame::ID_SPINCTRL10 = wxNewId();
 const long War_Game_GUIFrame::ID_SPINCTRL11 = wxNewId();
 const long War_Game_GUIFrame::ID_SPINCTRL12 = wxNewId();
 const long War_Game_GUIFrame::ID_PANEL2 = wxNewId();
+const long War_Game_GUIFrame::ID_PANEL3 = wxNewId();
+const long War_Game_GUIFrame::ID_TEXTCTRL1 = wxNewId();
+const long War_Game_GUIFrame::ID_BUTTON1 = wxNewId();
 const long War_Game_GUIFrame::idMenuQuit = wxNewId();
 const long War_Game_GUIFrame::idMenuAbout = wxNewId();
 const long War_Game_GUIFrame::ID_STATUSBAR1 = wxNewId();
@@ -92,17 +99,6 @@ War_Game_GUIFrame::War_Game_GUIFrame(wxWindow* parent,wxWindowID id)
 
     Create(parent, wxID_ANY, _("MainFrame"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
     SetClientSize(wxSize(1000,800));
-    Grid1 = new wxGrid(this, ID_GRID1, wxPoint(5,5), wxSize(605,615), 0, _T("ID_GRID1"));
-    Grid1->CreateGrid(40,40);
-    Grid1->Disable();
-    Grid1->EnableEditing(true);
-    Grid1->EnableGridLines(true);
-    Grid1->SetColLabelSize(1);
-    Grid1->SetRowLabelSize(1);
-    Grid1->SetDefaultRowSize(1, true);
-    Grid1->SetDefaultColSize(1, true);
-    Grid1->SetDefaultCellFont( Grid1->GetFont() );
-    Grid1->SetDefaultCellTextColour( Grid1->GetForegroundColour() );
     Panel1 = new wxPanel(this, ID_PANEL1, wxPoint(615,5), wxSize(380,305), wxTAB_TRAVERSAL, _T("ID_PANEL1"));
     wxFont Panel1Font(12,wxFONTFAMILY_DEFAULT,wxFONTSTYLE_NORMAL,wxFONTWEIGHT_NORMAL,false,wxEmptyString,wxFONTENCODING_DEFAULT);
     Panel1->SetFont(Panel1Font);
@@ -145,6 +141,9 @@ War_Game_GUIFrame::War_Game_GUIFrame(wxWindow* parent,wxWindowID id)
     SpinCtrl11->SetValue(_T("0"));
     SpinCtrl12 = new wxSpinCtrl(Panel2, ID_SPINCTRL12, _T("0"), wxPoint(144,256), wxDefaultSize, 0, 0, 100, 0, _T("ID_SPINCTRL12"));
     SpinCtrl12->SetValue(_T("0"));
+    Panel3 = new wxPanel(this, ID_PANEL3, wxPoint(5,5), wxSize(605,615), wxTAB_TRAVERSAL, _T("ID_PANEL3"));
+    TextCtrl1 = new wxTextCtrl(this, ID_TEXTCTRL1, _("Text"), wxPoint(8,632), wxSize(600,152), wxTE_READONLY|wxTE_WORDWRAP, wxDefaultValidator, _T("ID_TEXTCTRL1"));
+    Button1 = new wxButton(this, ID_BUTTON1, _("Start"), wxPoint(624,744), wxSize(360,31), 0, wxDefaultValidator, _T("ID_BUTTON1"));
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
     MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
@@ -162,10 +161,16 @@ War_Game_GUIFrame::War_Game_GUIFrame(wxWindow* parent,wxWindowID id)
     StatusBar1->SetStatusStyles(1,__wxStatusBarStyles_1);
     SetStatusBar(StatusBar1);
 
+    Connect(ID_TEXTCTRL1,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&War_Game_GUIFrame::OnTextCtrl1Text);
+    Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&War_Game_GUIFrame::OnButton1Click);
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&War_Game_GUIFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&War_Game_GUIFrame::OnAbout);
     //*)
+
 }
+
+
+
 
 War_Game_GUIFrame::~War_Game_GUIFrame()
 {
@@ -183,3 +188,26 @@ void War_Game_GUIFrame::OnAbout(wxCommandEvent& event)
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
 }
+
+void War_Game_GUIFrame::OnTextCtrl1Text(wxCommandEvent& event)
+{
+    /*wxTextCtrl *control = TextCtrl1;
+    std::streambuf *sbOld = std::cout.rdbuf();
+    std::cout.rdbuf(sbOld);*/
+}
+
+void War_Game_GUIFrame::OnButton1Click(wxCommandEvent& event)
+{
+    /*int *arr;*/
+    int arr[2];
+    arr[0] = Coordinates::pickRan();
+    wxString dziala = wxT("");
+    //std::cout << "Your coordinates are: " << arr[1] <<std::endl;
+    //std::string slowo = static_cast<char>(p.xval());
+    int a = arr[0];
+    dziala<<a;
+
+    TextCtrl1 -> ChangeValue(dziala);
+
+}
+

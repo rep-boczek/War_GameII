@@ -11,13 +11,14 @@
 #define WAR_GAME_GUIMAIN_H
 
 //(*Headers(War_Game_GUIFrame)
+#include <wx/button.h>
 #include <wx/frame.h>
-#include <wx/grid.h>
 #include <wx/menu.h>
 #include <wx/panel.h>
 #include <wx/spinctrl.h>
 #include <wx/stattext.h>
 #include <wx/statusbr.h>
+#include <wx/textctrl.h>
 //*)
 
 class War_Game_GUIFrame: public wxFrame
@@ -32,10 +33,11 @@ class War_Game_GUIFrame: public wxFrame
         //(*Handlers(War_Game_GUIFrame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
+        void OnTextCtrl1Text(wxCommandEvent& event);
+        void OnButton1Click(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(War_Game_GUIFrame)
-        static const long ID_GRID1;
         static const long ID_STATICTEXT1;
         static const long ID_STATICTEXT2;
         static const long ID_STATICTEXT3;
@@ -62,15 +64,19 @@ class War_Game_GUIFrame: public wxFrame
         static const long ID_SPINCTRL11;
         static const long ID_SPINCTRL12;
         static const long ID_PANEL2;
+        static const long ID_PANEL3;
+        static const long ID_TEXTCTRL1;
+        static const long ID_BUTTON1;
         static const long idMenuQuit;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
         //*)
 
         //(*Declarations(War_Game_GUIFrame)
-        wxGrid* Grid1;
+        wxButton* Button1;
         wxPanel* Panel1;
         wxPanel* Panel2;
+        wxPanel* Panel3;
         wxSpinCtrl* SpinCtrl10;
         wxSpinCtrl* SpinCtrl11;
         wxSpinCtrl* SpinCtrl12;
@@ -96,6 +102,7 @@ class War_Game_GUIFrame: public wxFrame
         wxStaticText* StaticText8;
         wxStaticText* StaticText9;
         wxStatusBar* StatusBar1;
+        wxTextCtrl* TextCtrl1;
         //*)
 
         DECLARE_EVENT_TABLE()

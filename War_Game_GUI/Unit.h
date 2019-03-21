@@ -1,25 +1,29 @@
 #ifndef UNIT_H
 #define UNIT_H
 
+#include <iostream>
+struct point
+{
+    int x, y;
+};
+
 
 class Unit
 {
     public:
         Unit();
-        int healthp;
-        int damagep;
-        int speed;
-
-        void calc_distance (float dis);
-        void position ();
-        void move();
-        void attack();
-
-
-
+        int* startPosition();
         virtual ~Unit();
 
     protected:
+
+    int healthp;
+        int damagep;
+        int speed;
+        void calc_distance (float dis);
+
+        void move();
+        void attack();
 
     private:
         //pozniej
