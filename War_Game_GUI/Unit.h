@@ -13,17 +13,21 @@ class Unit
     public:
         Unit();
         int* startPosition();
-        virtual ~Unit();
-
-    protected:
-
-    int healthp;
+        void moveU(int *);
+        int healthp;
         int damagep;
         int speed;
         void calc_distance (float dis);
+        int position[2];
 
-        void move();
         void attack();
+
+
+
+        virtual ~Unit();
+    protected:
+
+
 
     private:
         //pozniej

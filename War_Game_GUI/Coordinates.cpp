@@ -18,6 +18,12 @@ int Coordinates::pickRan()
 }
 
 
+/*int* Coordinates::moveU()
+{
+
+
+}*/
+
 
 Coordinates::~Coordinates()
 {

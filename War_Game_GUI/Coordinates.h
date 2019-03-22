@@ -12,7 +12,7 @@ class Coordinates
 		int x;
 		int y;
         static int pickRan();
-
+        //int* moveU(arr);
     protected:
 
 

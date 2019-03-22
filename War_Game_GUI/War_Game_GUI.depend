@@ -1853,8 +1853,9 @@
 1553124152 c:\rep_boczek\game\war_game_gui\war_game_guiapp.h
 	<wx/app.h>
 
-1553165837 c:\rep_boczek\game\war_game_gui\war_game_guimain.h
+1553286919 c:\rep_boczek\game\war_game_gui\war_game_guimain.h
 	<wx/button.h>
+	<wx/dcclient.h>
 	<wx/frame.h>
 	<wx/menu.h>
 	<wx/panel.h>
@@ -1909,26 +1910,29 @@
 	"wx/spinbutt.h"
 	"wx/dynarray.h"
 
-1553198556 source:c:\rep_boczek\game\war_game_gui\war_game_guimain.cpp
+1553286973 source:c:\rep_boczek\game\war_game_gui\war_game_guimain.cpp
 	"wx_pch.h"
 	"War_Game_GUIMain.h"
 	<wx/msgdlg.h>
 	<wx/textctrl.h>
+	<wx/dc.h>
 	"Unit.h"
+	"Coordinates.h"
 	<string>
 	<sstream>
 	<wx/font.h>
 	<wx/intl.h>
 	<wx/string.h>
 
-1553198941 source:c:\rep_boczek\game\war_game_gui\unit.cpp
+1553273635 source:c:\rep_boczek\game\war_game_gui\unit.cpp
 	<iostream>
 	"Unit.h"
 	<stdlib.h>
 	<time.h>
 	<Coordinates.h>
+	"gameFunctions.h"
 
-1553198941 c:\rep_boczek\game\war_game_gui\unit.h
+1553273602 c:\rep_boczek\game\war_game_gui\unit.h
 	<iostream>
 
 1553167579 c:\rep_boczek\game\war_game_gui\unit.cpp
@@ -1936,23 +1940,46 @@
 	<stdlib.h>
 	<time.h>
 
-1553197258 source:c:\rep_boczek\game\war_game_gui\coordinates.cpp
+1553270490 source:c:\rep_boczek\game\war_game_gui\coordinates.cpp
 	"Coordinates.h"
 	<iostream>
 	<stdlib.h>
 	<time.h>
 
-1553197258 c:\rep_boczek\game\war_game_gui\coordinates.h
+1553270477 c:\rep_boczek\game\war_game_gui\coordinates.h
 
-1553197258 c:\rep_boczek\game\war_game_gui\\coordinates.h
+1553270477 c:\rep_boczek\game\war_game_gui\\coordinates.h
 
-1553200760 source:c:\rep_boczek\game\war_game_gui\control.cpp
+1553273561 source:c:\rep_boczek\game\war_game_gui\control.cpp
 	<iostream>
 	"Unit.h"
 	<stdlib.h>
 	<time.h>
-	<Coordinates.h>
 	"Control.h"
 
 1553200750 c:\rep_boczek\game\war_game_gui\control.h
+
+1553283998 c:\rep_boczek\game\war_game_gui\gamefunctions.h
+	<iostream>
+	<stdlib.h>
+	<time.h>
+
+1553275992 source:c:\rep_boczek\game\war_game_gui\drawing.cpp
+	"Drawing.h"
+	"wx/wx.h"
+	"wx/sizer.h"
+
+1553279721 c:\rep_boczek\game\war_game_gui\drawing.h
+
+1553280095 source:c:\rep_boczek\game\war_game_gui\testframe.cpp
+	"wx_pch.h"
+	"TestFrame.h"
+	<wx/intl.h>
+	<wx/string.h>
+
+1553280094 c:\rep_boczek\game\war_game_gui\testframe.h
+	<wx/frame.h>
+
+1553287421 source:c:\rep_boczek\game\war_game_gui\main.cpp
+	<iostream>
 

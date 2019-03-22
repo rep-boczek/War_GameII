@@ -12,6 +12,7 @@
 
 //(*Headers(War_Game_GUIFrame)
 #include <wx/button.h>
+#include <wx/dcclient.h>
 #include <wx/frame.h>
 #include <wx/menu.h>
 #include <wx/panel.h>
@@ -35,6 +36,8 @@ class War_Game_GUIFrame: public wxFrame
         void OnAbout(wxCommandEvent& event);
         void OnTextCtrl1Text(wxCommandEvent& event);
         void OnButton1Click(wxCommandEvent& event);
+        void OnPanel3Paint(wxPaintEvent& event);
+        void OnCustom1Paint(wxPaintEvent& event);
         //*)
 
         //(*Identifiers(War_Game_GUIFrame)
@@ -64,9 +67,9 @@ class War_Game_GUIFrame: public wxFrame
         static const long ID_SPINCTRL11;
         static const long ID_SPINCTRL12;
         static const long ID_PANEL2;
-        static const long ID_PANEL3;
         static const long ID_TEXTCTRL1;
         static const long ID_BUTTON1;
+        static const long ID_CUSTOM1;
         static const long idMenuQuit;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
@@ -74,9 +77,9 @@ class War_Game_GUIFrame: public wxFrame
 
         //(*Declarations(War_Game_GUIFrame)
         wxButton* Button1;
+        wxClientDC* Custom1;
         wxPanel* Panel1;
         wxPanel* Panel2;
-        wxPanel* Panel3;
         wxSpinCtrl* SpinCtrl10;
         wxSpinCtrl* SpinCtrl11;
         wxSpinCtrl* SpinCtrl12;

@@ -11,8 +11,10 @@
 #include "War_Game_GUIMain.h"
 #include <wx/msgdlg.h>
 #include <wx/textctrl.h>
+#include <wx/dc.h>
 #include "Unit.h"
 #include "Coordinates.h"
+//#include "gameFunctions.h"
 #include <string>
 #include <sstream>
 
@@ -75,9 +77,9 @@ const long War_Game_GUIFrame::ID_SPINCTRL10 = wxNewId();
 const long War_Game_GUIFrame::ID_SPINCTRL11 = wxNewId();
 const long War_Game_GUIFrame::ID_SPINCTRL12 = wxNewId();
 const long War_Game_GUIFrame::ID_PANEL2 = wxNewId();
-const long War_Game_GUIFrame::ID_PANEL3 = wxNewId();
 const long War_Game_GUIFrame::ID_TEXTCTRL1 = wxNewId();
 const long War_Game_GUIFrame::ID_BUTTON1 = wxNewId();
+const long War_Game_GUIFrame::ID_CUSTOM1 = wxNewId();
 const long War_Game_GUIFrame::idMenuQuit = wxNewId();
 const long War_Game_GUIFrame::idMenuAbout = wxNewId();
 const long War_Game_GUIFrame::ID_STATUSBAR1 = wxNewId();
@@ -141,9 +143,9 @@ War_Game_GUIFrame::War_Game_GUIFrame(wxWindow* parent,wxWindowID id)
     SpinCtrl11->SetValue(_T("0"));
     SpinCtrl12 = new wxSpinCtrl(Panel2, ID_SPINCTRL12, _T("0"), wxPoint(144,256), wxDefaultSize, 0, 0, 100, 0, _T("ID_SPINCTRL12"));
     SpinCtrl12->SetValue(_T("0"));
-    Panel3 = new wxPanel(this, ID_PANEL3, wxPoint(5,5), wxSize(605,615), wxTAB_TRAVERSAL, _T("ID_PANEL3"));
     TextCtrl1 = new wxTextCtrl(this, ID_TEXTCTRL1, _("Text"), wxPoint(8,632), wxSize(600,152), wxTE_READONLY|wxTE_WORDWRAP, wxDefaultValidator, _T("ID_TEXTCTRL1"));
     Button1 = new wxButton(this, ID_BUTTON1, _("Start"), wxPoint(624,744), wxSize(360,31), 0, wxDefaultValidator, _T("ID_BUTTON1"));
+    Custom1 = new wxClientDC(this);
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
     MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
@@ -170,8 +172,9 @@ War_Game_GUIFrame::War_Game_GUIFrame(wxWindow* parent,wxWindowID id)
 }
 
 
-
-
+//Panel3->Connect(wxEVT_PAINT,(wxObjectEventFunction)&War_Game_GUIFrame::OnPanel3Paint,0,this);
+//Panel3->Connect(wxEVT_PAINT,(wxObjectEventFunction)&War_Game_GUIFrame::OnPanel3Paint,0,this);
+//Custom1->Connect(wxEVT_PAINT,(wxObjectEventFunction)&War_Game_GUIFrame::OnCustom1Paint,0,this);
 War_Game_GUIFrame::~War_Game_GUIFrame()
 {
     //(*Destroy(War_Game_GUIFrame)
@@ -196,18 +199,29 @@ void War_Game_GUIFrame::OnTextCtrl1Text(wxCommandEvent& event)
     std::cout.rdbuf(sbOld);*/
 }
 
+
 void War_Game_GUIFrame::OnButton1Click(wxCommandEvent& event)
 {
-    /*int *arr;*/
-    int arr[2];
-    arr[0] = Coordinates::pickRan();
+
+    int arr[2]={2,4};
+    int *a = arr;
+    //void moveU(int* arr, int speed)
+    //arr[0] = Coordinates::pickRan();
     wxString dziala = wxT("");
     //std::cout << "Your coordinates are: " << arr[1] <<std::endl;
     //std::string slowo = static_cast<char>(p.xval());
-    int a = arr[0];
-    dziala<<a;
+    //moveU(a, 2);
+
+    dziala<<a[1];
+    wxPaintDC dc(this);
+    //render(dc);
 
     TextCtrl1 -> ChangeValue(dziala);
-
+    Custom1->DrawCircle( 50, 50, 25 );
 }
 
+
+
+void War_Game_GUIFrame::OnCustom1Paint(wxPaintEvent& event)
+{
+}
