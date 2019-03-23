@@ -1,4 +1,0 @@
-
-    wxTextCtrl *control = TextCtrl1;
-        //wxTextCtrl *control = new wxTextCtrl1(...);
-    wxStreamToTextRedirector redirect(control);
