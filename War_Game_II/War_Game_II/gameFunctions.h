@@ -7,7 +7,7 @@
 #include <vector>
 #include <math.h>
 
-void moveUnit(int* arr, int speed)
+void moveUnit(int arr[], int speed)
 {
     int x = rand() % 2;
     if (x==1)

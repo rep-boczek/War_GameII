@@ -1,17 +1,19 @@
 # depslib dependency file v1.0
-1553296004 source:c:\rep_boczek\game\war_game_ii\war_game_ii\control.cpp
+1553464857 source:c:\rep_boczek\game\war_game_ii\war_game_ii\control.cpp
 	<iostream>
-	"Unit.h"
 	<stdlib.h>
 	<time.h>
+	<cmath>
 	"Control.h"
 
-1553379420 c:\rep_boczek\game\war_game_ii\war_game_ii\unit.h
+1553462869 c:\rep_boczek\game\war_game_ii\war_game_ii\unit.h
 	<iostream>
 	<cmath>
 	<vector>
 
-1553200750 c:\rep_boczek\game\war_game_ii\war_game_ii\control.h
+1553461791 c:\rep_boczek\game\war_game_ii\war_game_ii\control.h
+	"Formation.h"
+	"Unit.h"
 
 1553329878 source:c:\rep_boczek\game\war_game_ii\war_game_ii\coordinates.cpp
 	"Coordinates.h"
@@ -21,7 +23,7 @@
 
 1553270477 c:\rep_boczek\game\war_game_ii\war_game_ii\coordinates.h
 
-1553378257 source:c:\rep_boczek\game\war_game_ii\war_game_ii\unit.cpp
+1553463976 source:c:\rep_boczek\game\war_game_ii\war_game_ii\unit.cpp
 	<iostream>
 	"Unit.h"
 	<stdlib.h>
@@ -30,19 +32,20 @@
 	<math.h>
 	<vector>
 
-1553377293 c:\rep_boczek\game\war_game_ii\war_game_ii\gamefunctions.h
+1553429208 c:\rep_boczek\game\war_game_ii\war_game_ii\gamefunctions.h
 	<iostream>
 	<stdlib.h>
 	<time.h>
 	<vector>
 	<math.h>
 
-1553379420 source:c:\rep_boczek\game\war_game_ii\war_game_ii\main.cpp
+1553431386 source:c:\rep_boczek\game\war_game_ii\war_game_ii\main.cpp
 	<iostream>
 	"Unit.h"
 	<stdlib.h>
 	<windows.h>
 	<time.h>
+	"Game.h"
 	<vector>
 
 1502887718 c:\rep_boczek\glm\glm\glm.hpp
@@ -560,4 +563,20 @@
 1502887718 c:\rep_boczek\glm\glm\gtx\string_cast.inl
 	<cstdarg>
 	<cstdio>
+
+1553465543 source:c:\rep_boczek\game\war_game_ii\war_game_ii\game.cpp
+	"Game.h"
+	"Unit.h"
+	<windows.h>
+	<time.h>
+	"Formation.h"
+	"Control.h"
+
+1553417272 c:\rep_boczek\game\war_game_ii\war_game_ii\game.h
+
+1553453810 source:c:\rep_boczek\game\war_game_ii\war_game_ii\formation.cpp
+	"Formation.h"
+
+1553454972 c:\rep_boczek\game\war_game_ii\war_game_ii\formation.h
+	"Unit.h"
 

@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <cmath>
-
 #include <vector>
 
 
@@ -18,27 +17,33 @@ class Unit
 {
     public:
         Unit();
-        int* startPosition();
-        void moveU(int *);
-        int healthp;
-        int damagep;
-        int speed;
-
-        int position[2];
-
+        void moveU(int);
         void attack(int getDamage);
-        void sight(int *, std::vector<double>*);
-        void rot (int *, int *, std::vector<double>*);
-        void calc_distance (int *, int *, std::vector<double>*);
-
-
+        //void sight(std::vector<double>);
+        void sight(int);
+        void rot (int[]);
+        void setHealth(int);
+        void setSpeed(int);
+        void setDamagep(int);
+        int position[2];
+        std::vector<double> sightF;
         virtual ~Unit();
+        int speed=2;
+
+        int healthp=100;
+        int damagep=10;
+
     protected:
+
+
+
 
 
 
     private:
         //pozniej
+
+
 
 
 };
