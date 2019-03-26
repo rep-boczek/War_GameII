@@ -1,6 +1,10 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include "Unit.h"
+#include <windows.h>
+#include <time.h>
+#include "Control.h"
 
 class Game
 {

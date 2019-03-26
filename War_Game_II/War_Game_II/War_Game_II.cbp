@@ -12,12 +12,17 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++14" />
 					<Add option="-g" />
-					<Add directory="../../../glm" />
-					<Add directory="C:/rep_boczek/Game/War_Game_II/War_Game_II/" />
 				</Compiler>
 				<Linker>
-					<Add directory="../../../glm" />
+					<Add option="-ltgui-d" />
+					<Add option="-lsfml-graphics-d" />
+					<Add option="-lsfml-window-d" />
+					<Add option="-lsfml-system-d" />
+					<Add library="sfml-graphics-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-system-d" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -27,22 +32,43 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="C:/rep_boczek/Game/War_Game_II/War_Game_II/" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-ltgui" />
+					<Add option="-lsfml-graphics" />
+					<Add option="-lsfml-window" />
+					<Add option="-lsfml-system" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="C:/Program Files/CodeBlocks/SFML/include" />
+			<Add directory="C:/Program Files/CodeBlocks/TGUI/include" />
 		</Compiler>
+		<Linker>
+			<Add directory="C:/Program Files/CodeBlocks/SFML/lib" />
+			<Add directory="C:/Program Files/CodeBlocks/TGUI/lib" />
+		</Linker>
+		<Unit filename="AI.h" />
+		<Unit filename="Artilery.cpp" />
+		<Unit filename="Artilery.h" />
 		<Unit filename="Control.cpp" />
 		<Unit filename="Control.h" />
 		<Unit filename="Coordinates.cpp" />
 		<Unit filename="Coordinates.h" />
+		<Unit filename="Formation.cpp" />
+		<Unit filename="Formation.h" />
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
+		<Unit filename="Human.cpp" />
+		<Unit filename="Human.h" />
+		<Unit filename="Ninja.cpp" />
+		<Unit filename="Ninja.h" />
 		<Unit filename="Unit.cpp" />
 		<Unit filename="Unit.h" />
 		<Unit filename="gameFunctions.h" />

@@ -1,11 +1,6 @@
 #ifndef GAMEFUNCTIONS_H_INCLUDED
 #define GAMEFUNCTIONS_H_INCLUDED
 
-#include <iostream>
-#include <stdlib.h>
-#include <time.h>
-#include <vector>
-#include <math.h>
 
 void moveUnit(int arr[], int speed)
 {

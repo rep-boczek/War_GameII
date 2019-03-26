@@ -4,12 +4,13 @@
 #include <windows.h>
 #include <time.h>
 #include "Game.h"
-
+#include "GUI.h"
+#include <TGUI/TGUI.hpp>
 #include <vector>
 
-int main(void)
+int main()
 {
-    Game G;
-
+    GUI G;
+    G.mainFrame();
     return 0;
 }

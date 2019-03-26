@@ -1,9 +1,5 @@
 #include "Game.h"
-#include "Unit.h"
-#include <windows.h>
-#include <time.h>
-#include "Formation.h"
-#include "Control.h"
+
 
 
 Game::Game()

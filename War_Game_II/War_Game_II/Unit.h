@@ -13,10 +13,13 @@ struct point
 };
 
 
+
+
 class Unit
 {
     public:
         Unit();
+        float M_PI = 3.1416;
         void moveU(int);
         void attack(int getDamage);
         //void sight(std::vector<double>);
@@ -29,7 +32,7 @@ class Unit
         std::vector<double> sightF;
         virtual ~Unit();
         int speed=2;
-
+        void moveUnit(int [], int);
         int healthp=100;
         int damagep=10;
 

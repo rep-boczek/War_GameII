@@ -2,7 +2,7 @@
 #include "Unit.h"
 #include <stdlib.h>
 #include <time.h>
-#include "gameFunctions.h"
+
 #include <math.h>
 #include <vector>
 
@@ -12,10 +12,18 @@ Unit::Unit()
     //ctor
         srand(time(NULL));
 
+
+
+
 }
+
+
 
 void Unit::moveU(int i)
 {
+
+    int arr[2];
+
 
     if(i==0)
     {
@@ -26,7 +34,19 @@ void Unit::moveU(int i)
 
     else
     {
-        moveUnit(position, speed);
+        int x = rand() % 2;
+        if (x==1)
+            {arr[0]=arr[0]+1*speed;}
+        else
+            {arr[0]=arr[0]-1*speed;}
+        int y = rand() % 2;
+        if (y==1)
+            {arr[1]=arr[1]+1*speed;}
+        else
+            {arr[1]=arr[1]-1*speed;}
+
+        position[0] = arr[0];
+        position[1] = arr[1];
     }
 
 }
