@@ -2,16 +2,17 @@
 #define HUMAN_H
 
 #include <Unit.h>
+#include <string>
 
 
-class Human : protected Unit
+class Human : public Unit
 {
     public:
-       Human();
+        Human();
+       Human(std::string);
 
 
-        virtual void special();
-
+        virtual void special(Unit);
         virtual ~Human();
 
     protected:

@@ -1,33 +1,36 @@
 # depslib dependency file v1.0
-1553545417 source:c:\rep_boczek\game\war_game_ii\war_game_ii\artilery.cpp
+1553857727 source:c:\rep_boczek\game\war_game_ii\war_game_ii\artilery.cpp
 	"Artilery.h"
 
-1553623897 c:\rep_boczek\game\war_game_ii\war_game_ii\artilery.h
+1553857725 c:\rep_boczek\game\war_game_ii\war_game_ii\artilery.h
+	<string>
 	<Unit.h>
 
-1553623938 c:\rep_boczek\game\war_game_ii\war_game_ii\\unit.h
+1553857757 c:\rep_boczek\game\war_game_ii\war_game_ii\\unit.h
 	<iostream>
 	<cmath>
 	<vector>
+	<string>
 
-1553464857 source:c:\rep_boczek\game\war_game_ii\war_game_ii\control.cpp
+1553878772 source:c:\rep_boczek\game\war_game_ii\war_game_ii\control.cpp
 	<iostream>
 	<stdlib.h>
 	<time.h>
 	<cmath>
 	"Control.h"
 
-1553461791 c:\rep_boczek\game\war_game_ii\war_game_ii\control.h
+1553878612 c:\rep_boczek\game\war_game_ii\war_game_ii\control.h
 	"Formation.h"
 	"Unit.h"
 
 1553622300 c:\rep_boczek\game\war_game_ii\war_game_ii\formation.h
 	"Unit.h"
 
-1553623938 c:\rep_boczek\game\war_game_ii\war_game_ii\unit.h
+1553857757 c:\rep_boczek\game\war_game_ii\war_game_ii\unit.h
 	<iostream>
 	<cmath>
 	<vector>
+	<string>
 
 1553329878 source:c:\rep_boczek\game\war_game_ii\war_game_ii\coordinates.cpp
 	"Coordinates.h"
@@ -37,25 +40,26 @@
 
 1553270477 c:\rep_boczek\game\war_game_ii\war_game_ii\coordinates.h
 
-1553453810 source:c:\rep_boczek\game\war_game_ii\war_game_ii\formation.cpp
+1553856771 source:c:\rep_boczek\game\war_game_ii\war_game_ii\formation.cpp
 	"Formation.h"
 
-1553622402 source:c:\rep_boczek\game\war_game_ii\war_game_ii\game.cpp
+1553886589 source:c:\rep_boczek\game\war_game_ii\war_game_ii\game.cpp
 	"Game.h"
 
-1553622402 c:\rep_boczek\game\war_game_ii\war_game_ii\game.h
+1553878363 c:\rep_boczek\game\war_game_ii\war_game_ii\game.h
 	"Unit.h"
 	<windows.h>
 	<time.h>
 	"Control.h"
 
-1553624228 source:c:\rep_boczek\game\war_game_ii\war_game_ii\human.cpp
+1553857950 source:c:\rep_boczek\game\war_game_ii\war_game_ii\human.cpp
 	"Human.h"
 
-1553624139 c:\rep_boczek\game\war_game_ii\war_game_ii\human.h
+1553857950 c:\rep_boczek\game\war_game_ii\war_game_ii\human.h
 	<Unit.h>
+	<string>
 
-1553636107 source:c:\rep_boczek\game\war_game_ii\war_game_ii\main.cpp
+1553716380 source:c:\rep_boczek\game\war_game_ii\war_game_ii\main.cpp
 	<iostream>
 	"Unit.h"
 	<stdlib.h>
@@ -65,10 +69,12 @@
 	"GUI.h"
 	<TGUI/TGUI.hpp>
 	<vector>
+	"Manager.h"
 
-1553637154 c:\rep_boczek\game\war_game_ii\war_game_ii\gui.h
+1553801414 c:\rep_boczek\game\war_game_ii\war_game_ii\gui.h
 	<iostream>
 	<TGUI/TGUI.hpp>
+	"Game.h"
 
 1550916604 c:\program files\codeblocks\tgui\include\tgui\tgui.hpp
 	<TGUI/Clipboard.hpp>
@@ -1024,23 +1030,52 @@
 1525812018 c:\program files\codeblocks\sfml\include\sfml\main.hpp
 	<SFML/Config.hpp>
 
-1553623929 source:c:\rep_boczek\game\war_game_ii\war_game_ii\ninja.cpp
+1553857950 source:c:\rep_boczek\game\war_game_ii\war_game_ii\ninja.cpp
 	"Ninja.h"
 
-1553622569 c:\rep_boczek\game\war_game_ii\war_game_ii\ninja.h
+1553857950 c:\rep_boczek\game\war_game_ii\war_game_ii\ninja.h
 	<Human.h>
+	<string>
 
-1553624139 c:\rep_boczek\game\war_game_ii\war_game_ii\\human.h
+1553857950 c:\rep_boczek\game\war_game_ii\war_game_ii\\human.h
 	<Unit.h>
+	<string>
 
-1553624019 source:c:\rep_boczek\game\war_game_ii\war_game_ii\unit.cpp
+1553884261 source:c:\rep_boczek\game\war_game_ii\war_game_ii\unit.cpp
 	<iostream>
 	"Unit.h"
 	<stdlib.h>
 	<time.h>
 	<math.h>
 	<vector>
+	"gameFunctions.h"
 
-1553635193 source:c:\rep_boczek\game\war_game_ii\war_game_ii\gui.cpp
+1553884261 source:c:\rep_boczek\game\war_game_ii\war_game_ii\gui.cpp
 	"GUI.h"
+	<windows.h>
+	<time.h>
+	<string>
+
+1553724412 c:\rep_boczek\game\war_game_ii\war_game_ii\manager.h
+	"Game.h"
+	"GUI.h"
+
+1553801747 source:c:\rep_boczek\game\war_game_ii\war_game_ii\manager.cpp
+	"Manager.h"
+
+1553712428 c:\rep_boczek\game\war_game_ii\war_game_ii\\gamefunctions.h
+
+1553717563 c:\rep_boczek\game\war_game_ii\war_game_ii\gamefunctions.h
+
+1553813604 source:c:\rep_boczek\game\war_game_ii\war_game_ii\granade.cpp
+	"Granade.h"
+
+1553813604 c:\rep_boczek\game\war_game_ii\war_game_ii\granade.h
+
+1553857950 source:c:\rep_boczek\game\war_game_ii\war_game_ii\soldier.cpp
+	"Soldier.h"
+
+1553857950 c:\rep_boczek\game\war_game_ii\war_game_ii\soldier.h
+	<Human.h>
+	<string>
 

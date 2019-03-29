@@ -2,6 +2,8 @@
 #define GAMEFUNCTIONS_H_INCLUDED
 
 
+
+
 void moveUnit(int arr[], int speed)
 {
     int x = rand() % 2;

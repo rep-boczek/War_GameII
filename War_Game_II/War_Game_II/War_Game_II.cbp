@@ -14,6 +14,7 @@
 				<Compiler>
 					<Add option="-std=c++14" />
 					<Add option="-g" />
+					<Add directory="C:/rep_boczek/Game/War_Game_II/War_Game_II/" />
 				</Compiler>
 				<Linker>
 					<Add option="-ltgui-d" />
@@ -32,6 +33,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="C:/rep_boczek/Game/War_Game_II/War_Game_II/" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -59,21 +61,30 @@
 		<Unit filename="Artilery.h" />
 		<Unit filename="Control.cpp" />
 		<Unit filename="Control.h" />
-		<Unit filename="Coordinates.cpp" />
-		<Unit filename="Coordinates.h" />
 		<Unit filename="Formation.cpp" />
 		<Unit filename="Formation.h" />
+		<Unit filename="GUI.cpp" />
+		<Unit filename="GUI.h" />
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
+		<Unit filename="Granade.cpp" />
+		<Unit filename="Granade.h" />
 		<Unit filename="Human.cpp" />
 		<Unit filename="Human.h" />
+		<Unit filename="Manager.cpp" />
+		<Unit filename="Manager.h" />
 		<Unit filename="Ninja.cpp" />
 		<Unit filename="Ninja.h" />
+		<Unit filename="Soldier.cpp" />
+		<Unit filename="Soldier.h" />
 		<Unit filename="Unit.cpp" />
 		<Unit filename="Unit.h" />
+		<Unit filename="examples/RedBackground.jpg" />
 		<Unit filename="gameFunctions.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="notes.txt" />
+		<Unit filename="themes/Background.jpg" />
+		<Unit filename="themes/Black.txt" />
 		<Extensions>
 			<code_completion />
 			<envvars />

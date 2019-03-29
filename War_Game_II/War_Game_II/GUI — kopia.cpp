@@ -1,22 +1,10 @@
 #include "GUI.h"
 #include <windows.h>
 #include <time.h>
-#include <string>
 
 GUI::GUI()
 {
     //ctor
-
-    pos = new int[2];
-    pos2 = new int [2];
-
-
-}
-
-int GUI::mainFrame()
-{
-
-
 
 sf::RenderWindow window(sf::VideoMode(1000, 800), "TGUI window");
     window.setFramerateLimit(60);
@@ -27,6 +15,7 @@ sf::RenderWindow window(sf::VideoMode(1000, 800), "TGUI window");
 
         auto canvas = tgui::Canvas::create({600, 600});
         canvas->setPosition(10, 10);
+        canvas->clear();
         canvas->display();
         gui.add(canvas);
 
@@ -122,7 +111,6 @@ sf::RenderWindow window(sf::VideoMode(1000, 800), "TGUI window");
         ninjaBox1->setPosition(740, 25);
         gui.add(ninjaBox1);
 
-
         auto soldierBox1 = tgui::EditBox::create();
         soldierBox1->setRenderer(theme.getRenderer("EditBox"));
         soldierBox1->setSize(50, 25);
@@ -201,78 +189,36 @@ sf::RenderWindow window(sf::VideoMode(1000, 800), "TGUI window");
         gui.add(robot2000Box2);
 
 
-        auto buttonStart = tgui::Button::create();
-        buttonStart->setRenderer(theme.getRenderer("Button"));
-        buttonStart->setPosition(770, 505);
-        buttonStart->setSize(100, 40);
-        buttonStart->setText("START");
-        gui.add(buttonStart);
-
-
         sf::CircleShape circle;
         circle.setRadius(2);
         circle.setOutlineColor(sf::Color::Red);
         circle.setOutlineThickness(5);
 
 
+
         int ii=0;
-        int x=0, y=0;
-        int iter = 0;
 
-
-        std::string s;
-        std::string s2;
-        std::vector<Unit> *P1team = new std::vector<Unit>;
-        std::vector<Unit> *P2team = new std::vector<Unit>;
-
-        Game *Ga = new Game(iter,0,0, P1team, P2team);
 
         while (window.isOpen())
         {
             sf::Event event;
 
-            //Get values
-
-            if(s.compare("")==0)
-            {
-                buttonStart->connect("pressed", [&](){
-                                     s = ninjaBox1->getText().toAnsiString();
-                                     soldierBox1->setText(s);
-                                     s2 = ninjaBox2->getText().toAnsiString();
-                                     soldierBox2->setText(s2);
-                                        delete Ga;
-                                    Ga = new Game(iter, std::stoi(s), std::stoi(s2), P1team, P2team);
-                                    Ga->disp();
-                                     });
-            }
-            else
-            {
-
-            if(Ga->nOfUnitsP1!=0 && Ga->nOfUnitsP2!=0)
-            {
-                Ga->disp();
-                Ga->Play(iter, P1team, P2team);
-                canvas->clear();
-                for(int i = 0; i<Ga->nOfUnitsP1; i++)
-                {
-                    //std::cout<<"GAME POS1"<<P1team->at(i).position[0]<<","<<P1team->at(i).position[1]<<std::endl;
-                    circle.setPosition(P1team->at(i).position[0], P1team->at(i).position[1]);
-                    canvas->draw(circle);
-                }
-                for(int i = 0; i<Ga->nOfUnitsP2; i++)
-                {
-                    //std::cout<<"GAME POS2"<<P2team->at(i).position[0]<<","<<P2team->at(i).position[1]<<std::endl;
-                    circle.setPosition(P2team->at(i).position[0], P2team->at(i).position[1]);
-                    canvas->draw(circle);
-                }
-                            iter++;
-            }
-            }
-
-
- Sleep(200);
             while (window.pollEvent(event))
             {
+
+                ii=0;
+
+        if(ii==0)
+            circle.setPosition(10, 20);
+        else
+            circle.setPosition(20, 40);
+        ii=1;
+
+        canvas->clear();
+        canvas->draw(circle);
+
+
+
                 if (event.type == sf::Event::Closed)
                 {gui.removeAllWidgets();
                     window.close();}
@@ -284,11 +230,16 @@ sf::RenderWindow window(sf::VideoMode(1000, 800), "TGUI window");
             window.clear();
             gui.draw(); // Draw all widgets
             window.display();
-
-
-
         }
-return EXIT_SUCCESS;
+
+
+
+}
+
+int GUI::mainFrame()
+{
+
+
 
 }
 

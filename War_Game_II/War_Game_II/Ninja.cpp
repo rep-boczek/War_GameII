@@ -1,17 +1,21 @@
 #include "Ninja.h"
 
-
-
 Ninja::Ninja()
 {
     //ctor
 }
 
-void Ninja::special()
+Ninja::Ninja(std::string name)
 {
-    int speed = speed*2;
-    int i =1;
-    moveU(i);
+    //ctor
+}
+
+void Ninja::special(Unit D)
+{
+
+    position[0] = D.position[0]+1;
+    position[1] = D.position[1]+1;
+
 }
 
 Ninja::~Ninja()

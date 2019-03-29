@@ -10,8 +10,8 @@ class Control
         Control();
         virtual ~Control();
         int calc_distance (Unit, Unit);
-        int closestEnemy (Unit, Unit[], int);
-        bool DoIseeEnemy (Unit, Unit[], int);
+        int closestEnemy (Unit, std::vector<Unit>*, int);
+        bool DoIseeEnemy (Unit, std::vector<Unit>*, int);
     protected:
 
     private:

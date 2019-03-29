@@ -9,7 +9,7 @@ Formation::Formation()
 
 void Formation::setLeg()
 {
-    Unit leg[formationCount];
+    //Unit leg[formationCount];
 }
 
 /*void Unit::moveU(int);

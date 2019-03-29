@@ -7,10 +7,13 @@
 #include "GUI.h"
 #include <TGUI/TGUI.hpp>
 #include <vector>
+#include "Manager.h"
 
 int main()
 {
-    GUI G;
-    G.mainFrame();
+    //GUI G;
+    //G.mainFrame();
+
+    Manager Man;
     return 0;
 }

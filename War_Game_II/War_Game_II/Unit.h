@@ -4,13 +4,9 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include <string>
 
 
-
-struct point
-{
-    int x, y;
-};
 
 
 
@@ -19,9 +15,11 @@ class Unit
 {
     public:
         Unit();
+        Unit(std::string);
         float M_PI = 3.1416;
         void moveU(int);
-        void attack(int getDamage);
+        //void attack(int getDamage);
+        void attack(int);
         //void sight(std::vector<double>);
         void sight(int);
         void rot (int[]);
@@ -30,11 +28,12 @@ class Unit
         void setDamagep(int);
         int position[2];
         std::vector<double> sightF;
-        virtual ~Unit();
+
         int speed=2;
-        void moveUnit(int [], int);
+        //void moveUnit(int [], int);
         int healthp=100;
         int damagep=10;
+         virtual ~Unit();
 
     protected:
 
